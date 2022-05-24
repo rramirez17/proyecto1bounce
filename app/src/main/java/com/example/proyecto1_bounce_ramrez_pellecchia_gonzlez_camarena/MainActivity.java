@@ -3,6 +3,7 @@ package com.example.proyecto1_bounce_ramrez_pellecchia_gonzlez_camarena;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -28,8 +29,33 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.animati);
-                imageView.startAnimation(animation);
+                imageView.setImageResource(R.drawable.bounce_raul_1);
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        imageView.setImageResource(R.drawable.bounce_raul_2);
+                        Animation bounce_up = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce_up);
+                        imageView.startAnimation(bounce_up);
+                        Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            public void run() {
+                                imageView.setImageResource(R.drawable.bounce_raul_3);
+                                Animation bounce_down = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce_down);
+                                imageView.startAnimation(bounce_down);
+                                Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    public void run() {
+                                        Animation get_off_trampoline = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.get_off_trampoline);
+                                        imageView.startAnimation(get_off_trampoline);
+                                        imageView.setImageResource(R.drawable.bounce_raul_4);
+                                    }
+                                }, 1700);
+                            }
+                        }, 850);
+                    }
+                }, 700);
+
+
             }
         });
     }
