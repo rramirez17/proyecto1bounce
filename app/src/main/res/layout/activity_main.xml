@@ -29,7 +29,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/bounce_raul_1" />
+        android:src="" />
 
     <Button
         android:id="@+id/button"
