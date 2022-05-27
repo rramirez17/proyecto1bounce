@@ -75,7 +75,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="280dp"
         android:layout_marginBottom="80dp"
-        android:text="Button"
+        android:text="@string/button4"
         android:textSize="18dp"
         android:textStyle="bold"/>
 
