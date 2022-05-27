@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Proyecto1_Bounce_Ramírez_Pellecchia_González_Camarena</string>
-    <string name="button1">Raúl Ramírez</string>
-    <string name="button2">Angela Pellecchia</string>
-    <string name="button3">David</string>
+    <string name="button1">Raúl R</string>
+    <string name="button2">Angela P</string>
+    <string name="button3">David C</string>
     <string name="button4">Holger G</string>
 </resources>
